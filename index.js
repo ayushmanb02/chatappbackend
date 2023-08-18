@@ -5,7 +5,7 @@ const authRoutes = require("./routes/auth");
 const messageRoutes = require("./routes/messages");
 const app = express();
 const socket = require("socket.io");
-const BASE_URL=process.env.BASE_URL;
+process.env.BASE_URL
 
 require("dotenv").config();
 
@@ -32,7 +32,7 @@ const server = app.listen(process.env.PORT, () =>
 );
 const io = socket(server, {
   cors: {
-    origin: BASE_URL,
+    origin: process.env.BASE_URL,
     credentials: true,
   },
 });
