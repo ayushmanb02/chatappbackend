@@ -5,7 +5,7 @@ const authRoutes = require("./routes/auth");
 const messageRoutes = require("./routes/messages");
 const app = express();
 const socket = require("socket.io");
-process.env.BASE_URL
+
 
 require("dotenv").config();
 
